@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-base">
-              Just Dream your tour leave rest of the things fro us.
+              Just Dream your tour leave rest of the things for us.
             </div>
           </div>
           <div className=" flex flex-col items-start sm:px-6 pb-8  justify-start gap-2 md:w-1/3  w-full">
@@ -138,10 +138,24 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-gray-100 py-2 text-center flex items-center justify-center text-sm bg-red-500">
+      <div className="text-gray-100 py-2 text-center md:flex hidden items-center justify-center text-sm bg-red-500">
         Copyright © {new Date().getFullYear()} BharatTourAndTravel All Rights
         Reserved | Design & Developed by :{" "}
-        <Link to="" className="font-bold ml-1">
+        <Link
+          target="_blank"
+          to="https://ubaishmalik.in"
+          className="font-bold ml-1"
+        >
+          Ubaish Malik
+        </Link>
+      </div>
+      <div className="text-gray-100 md:hidden  py-2 text-center flex items-center justify-center text-sm bg-red-500">
+        Design & Developed by :{" "}
+        <Link
+          target="_blank"
+          to="https://ubaishmalik.in"
+          className="font-bold ml-1"
+        >
           Ubaish Malik
         </Link>
       </div>

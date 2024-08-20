@@ -101,7 +101,7 @@ const Home = () => {
 
 const Main = () => {
   return (
-    <div className="w-full flex items-center justify-center h-[30rem] ">
+    <div className="w-screen  flex items-center justify-center min-h-[30rem] ">
       <video
         autoPlay
         loop
@@ -111,10 +111,10 @@ const Main = () => {
         <source src={video} type="video/mp4" />
       </video>
       <div className="flex flex-col items-center justify-center text-white gap-4">
-        <h1 className="text-7xl font-extrabold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+        <h1 className="md:text-7xl text-4xl font-extrabold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
           Travel Whole India
         </h1>
-        <div className="text-xl px-60 text-center ">
+        <div className="text-xl md:px-60 px-12 text-center ">
           Leading Travel Company In Motorcycle touring Industry || Major Deal
           With Ladakh || Spiti || Himachal || Uttarakhand Rides & Chardham Yatra
           ( Uttarakhand)
@@ -138,11 +138,11 @@ const Main = () => {
 
 const TopDestinations = () => {
   return (
-    <div className="px-40 my-40">
+    <div className="lg:px-40 sm:px-20 px-4 md:my-40 my-60">
       <h1 className="uppercase w-full text-center text-4xl  text-[#353636] my-6 font-extrabold ">
         Top destinations
       </h1>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-3">
         {destinations?.map((dest, index) => (
           <div
             key={index}
@@ -166,19 +166,21 @@ const TopDestinations = () => {
 
 const PopulorPackages = () => {
   return (
-    <div className="px-40 mt-40 parallex h-[32rem] flex items-center justify-center flex-col">
-      <h1 className="text-6xl font-extrabold text-gray-100 uppercase mb-8">
+    <div className="md:px-20 sm:px-12 px-4 mt-40 parallex h-[32rem] flex items-center justify-center flex-col">
+      <h1 className="md:text-6xl sm:text-4xl text-2xl  font-extrabold text-gray-100 uppercase mb-8">
         POPULAR PACKAGES
       </h1>
-      <div className="flex items-center capitalize gap-8 justify-center">
+      <div className="flex items-center capitalize md:gap-8 gap-2 flex-wrap justify-center">
         {populoadPackages?.map((pkg, index) => (
           <>
             <div className="text-white flex flex-col justify-center  items-center gap-2">
               {pkg.icon}
-              <div className="text-2xl font-medium mt-[-8px]">{pkg.label}</div>
+              <div className="md:text-2xl text-xl font-medium mt-[-8px]">
+                {pkg.label}
+              </div>
             </div>
             {index < populoadPackages?.length - 1 && (
-              <div className="h-28 bg-white w-[1px]" />
+              <div className="h-28 bg-white sm:flex hidden  w-[1px]" />
             )}
           </>
         ))}
@@ -189,13 +191,13 @@ const PopulorPackages = () => {
 
 const Features = () => {
   return (
-    <div className="px-40  h-[30rem] flex items-center justify-center flex-col">
-      <h1 className="text-5xl mt-12 font-extrabold text-[#353636] uppercase">
+    <div className="xl:px-40 lg:px-28 px-6 xl:my-32 min-h-[30rem] flex items-center justify-center flex-col ">
+      <h1 className="md:text-5xl sm:text-3xl text-2xl mt-12 font-extrabold text-[#353636] uppercase">
         WHY TRAVEL WHOLE INDIA
       </h1>
       <p>We have a unique way of meeting your adventurous expectations!</p>
-      <div className="grid grid-cols-4 w-full gap-2 mt-8">
-        <div className="col-span-1 bg-gray-100 border rounded-md aspect-square flex items-center flex-col gap-2 justify-center">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-2 mt-8">
+        <div className="col-span-1  bg-gray-100 border rounded-md aspect-square flex items-center flex-col gap-2 justify-center">
           <img
             src={tagIcon}
             alt=""
@@ -234,16 +236,16 @@ const Features = () => {
 
 const Enquire = () => {
   return (
-    <div className="w-full  py-12 relative h-screen overflow-hidden">
+    <div className="w-full lg:py-40 py-12 relative h-screen overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1576413209841-efe9c2cd11aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className=" w-full object-cover h-[50rem]"
+        className=" w-full object-cover brightness-50 mg:h-[50rem] h-[80rem]"
       />
-      <div className="w-full h-[43rem] bg-black absolute bottom-0 left-0 opacity-50" />
-      <div className="absolute w-full px-60 text-white left-1/2 top-1/2 gap-6 -translate-x-1/2 -translate-y-1/2 grid grid-cols-2">
+      {/* <div className="w-full h-[43rem] bg-black absolute bottom-0 left-0 opacity-50" /> */}
+      <div className="absolute w-full lg:px-60 md:px-40 sm:px-20 px-6 text-white left-1/2 top-1/2 gap-6 -translate-x-1/2 -translate-y-1/2 grid lg:grid-cols-2 grid-cols-1">
         <div className="col-span-1 flex items-start flex-col justify-between">
-          <h1 className="text-7xl font-extrabold ">
+          <h1 className="lg:text-7xl md:text-4xl text-3xl font-extrabold ">
             JOURNEY TO EXPLORE NATURE
           </h1>
           <div className="text-xl">
@@ -253,7 +255,7 @@ const Enquire = () => {
             and other countries to find a perfect holiday And corporate. We are
             providing excellent Solutions!
           </div>
-          <div className="flex gap-2 mt-4">
+          <div className="md:flex hidden gap-2 mt-4">
             <Button variant="contained" color="error" size="large">
               Read More
             </Button>
@@ -317,18 +319,18 @@ const Enquire = () => {
 
 const LimitedOffers = () => {
   return (
-    <div className="px-40 my-40">
-      <div className="flex items-center justify-between mb-12">
+    <div className="lg:px-40 md:px-20 sm:px-12 px-6 my-40">
+      <div className="flex md:flex-row flex-col items-center justify-between mb-12">
         <h1 className="text-4xl font-extrabold text-[#353636] uppercase">
           LIMITED TIME OFFERS
         </h1>
-        <div className="w-1/2">
+        <div className="md:w-1/2 w-full text-center md:px-0 px-6">
           Travel Whole India is a holiday and travel experiences company. We
           love vacations and our love of travel combined with passion turned
           into a profession .
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3">
         {destinations?.map((dest, index) => (
           <div
             key={index}

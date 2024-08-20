@@ -17,17 +17,17 @@ import { CONSTANTS } from "../../constants";
 const Header = () => {
   return (
     <div className="w-screen text-gray-white pt-4">
-      <div className="w-full flex items-center justify-between px-52 text-base">
+      <div className="w-full  flex items-center justify-between lg:px-52 md:px-12 px-6 md:text-base text-sm">
         <div className="flex items-center gap-4 capitalize">
           <div className="flex items-center gap-1">
             <FaPhoneAlt size={18} />
             123456789
           </div>
-          <div className="flex items-center gap-1">
+          <div className=" md:flex hidden items-center gap-1">
             <IoMdMail size={18} />
             ubaish@gmail.com
           </div>
-          <div className="flex items-center gap-1">
+          <div className=" items-center gap-1 md:flex hidden">
             <IoLocation size={18} />
             b7 old police statin pakbara
           </div>
@@ -56,13 +56,13 @@ const Header = () => {
         </div>
       </div>
       <div className="w-screen h-[1px] bg-white my-4 opacity-90" />
-      <div className="w-full flex items-center justify-between px-52 text-base">
+      <div className="w-full  sm:flex hidden items-center justify-between lg:px-52 md:px-12 px-6 text-base">
         <Link to="/" className="text-xl font-bold">
           <span className="text-purple-800">Bharat</span>Tour
           <span className="text-purple-800">And</span>Travel
         </Link>
         <div className="flex text-lg gap-4">
-          <Button href="/" color="inherit">
+          {/* <Button href="/" color="inherit">
             Home
           </Button>
           <Dropdown
@@ -77,7 +77,7 @@ const Header = () => {
                 link: "/packages/domestic",
               },
             ]}
-          />
+          /> */}
 
           <Button href="/about" color="inherit">
             About Us
